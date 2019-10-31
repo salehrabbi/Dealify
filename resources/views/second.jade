@@ -1,0 +1,95 @@
+extends layouts/app.jade
+
+block title
+  title Home
+block vars
+  - bodyClass= 'whiteTheme'
+  - bodyid= 'dvideo-body'
+
+block main
+  #PreLoaderBar.loading-welcome.active.welcome-screen(style='background-color: #ffffff;')
+    .progress
+      .loading-bar.indeterminate(style='background-color: rgb(243, 113, 37);')
+    .helper
+    img(src='dist/images/welcome.png' style='max-width: 100px; max-height: 100px;')
+  #rootElement.vcard-template.style2
+    .bgd-shadow
+    .page-home.page
+      .event-organizer.desktop.company-title.ng-scope(style='background: rgb(243, 113, 37) none repeat scroll 0% 0%;')
+        span.dynamicTextColor.ng-binding
+          | Dealify
+    .vcard-header(style="background-color: rgba(243, 113, 37, 0.2);")
+      .vcard-header-wrapper
+        #videoContainer.vcard-top-info.wrapper-ytThumbnail.ng-scope
+          .introVid.thumbnailImg(style='background: rgba(0, 0, 0, 0) url("https://i.ytimg.com/vi/qIMvLUjYOHs/mqdefault.jpg") repeat scroll 0% 0%;')
+        .event-section-title(style='background: rgb(243, 113, 37) none repeat scroll 0% 0%;')
+          .event-content-container
+            .event-title.dynamicTextColor.ng-binding
+              | Why advertise with Dealify?
+            .event-teaser.mt-10.dynamicTextColor.text-break.ng-binding
+              | Our location-based advertising app allows you to reach thousands of local shoppers when they are nearby and looking to spend. You can now create and offer your promotions instantly.
+            a.ripplelink.event-action-btn.ng-binding.ng-scope(href="https://dealify.ca/" target="_blank" style='color: rgb(243, 113, 37);')
+              | Learn more
+    .event-body
+      .vcard-body-wrapper
+        .vcard-body
+          .dvideo-details
+            #dvideo-details
+              div
+                .vcard-row.socialMedia-container  
+                  label Social Media
+                  i.icon-social-media
+                  .channels-padding
+                    a#channel-item-Website.channel-container.ng-scope(href='http://dealify.ca' target='_blank')
+                      .table-cell-middle1.pl-55.pos-relative
+                        .channel-bgd-website
+                          i.icon-social-website
+                    a#channel-item-Facebook.channel-container.ng-scope(href='http://facebook.com/dealifyapp' target='_blank')
+                      .table-cell-middle1.pl-55.pos-relative
+                        .channel-bgd-facebook
+                          i.icon-social-facebook
+                    a#channel-item-Instagram.channel-container.ng-scope(href='http://www.instagram.com/dealifyapp' target='_blank')
+                      .table-cell-middle1.pl-55.pos-relative
+                        .channel-bgd-instagram
+                          i.icon-social-instagram
+          .vcard-row.follow-scroll.share-container
+            #shareFab.fabs
+              .fixed-blur-bgd
+                .overlya-share
+                .chat
+                  .fab-body
+                    .icon-fab-close.icon-event-close
+                    .fab-header Share page
+                    ul.ssk-block.ssk-md
+                      li
+                        i.icon-fab-share-facebook
+                        a.ssk.ssk-text.ssk-facebook(href='https://www.facebook.com/sharer/sharer.php?u=http://qrco.de/bbIefJ?trackSharing=1') Facebook
+                      li
+                        i.icon-fab-share-twitter
+                        a.ssk.ssk-text.ssk-twitter(href='https://twitter.com/share?url=http://qrco.de/bbIefJ?trackSharing=1') Twitter
+                      li
+                        i.icon-fab-share-googleplus
+                        a.ssk.ssk-text.ssk-google-plus(href='https://plus.google.com/share?url=http://qrco.de/bbIefJ?trackSharing=1') Google+
+                      li
+                        i.iconFab.icon-fab-share-whatsapp
+                        a.ssk.ssk-whatsapp(href='whatsapp://send?text=http://qrco.de/bbIgAK?trackSharing=1') Whatsapp
+                      li
+                        i.icon-fab-share-email
+                        a(href='mailto:?body=http://qrco.de/bbIgAK?trackSharing=1' target='_blank') Email
+                      li.d-flex
+                        i.icon-fab-share-message
+                        input#shortUrl.mr-2(value='http://qrco.de/bbIgAK' readonly='')
+                        #clipbord.d-none http://qrco.de/bbIgAK
+                        button#copyButton.copyButton(onclick="copyToClipboard('#clipbord')") Copy
+                        .ifCopySucceed.ng-hide.d-none.CopySucceed(ng-show='ifCopySucceed')
+                          | Text copied to the clipboard.
+              a#share-fab-button.fab(style='background: rgb(0, 0, 0) none repeat scroll 0% 0%;')
+                span.hidden-xs(style='color: white;')
+                  i.prime.icon.icon-fab-share
+                  | Share this page
+                i.prime.icon.icon-fab-share.visible-xs(style='color: white;')
+
+
+
+
+

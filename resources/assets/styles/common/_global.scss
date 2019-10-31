@@ -1,0 +1,63 @@
+body {
+  @include rwd(479) {
+    color: #fff;
+  }
+}
+.fixed-blur-bgd {
+  &.active {
+    display: block;
+  }
+}
+.overlya-share {
+  display: none;
+  &.active {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+#shareFab {
+  .fab-body ul li i.icon-fab-share-facebook {
+    color: #3a5897;
+  }
+  .fab-body ul li i.icon-fab-share-twitter {
+    color: #1da1f2;
+  }
+  .fab-body ul li i.icon-fab-share-googleplus {
+    color: #ea4335;
+  }
+  .fab-body ul li i.icon-fab-share-whatsapp {
+    color: #25d366;
+  }
+}
+
+#shortUrl {
+  pointer-events: initial;
+}
+
+#dvideo-body .event-teaser.text-break {
+  margin-top: 15px;
+}
+
+.yt_players {
+  height: 100%;
+  width: 100%;
+}
+@include rwd(690) {
+  #dvideo-body .event-organizer.desktop {
+    display: block;
+    position: static;
+  }
+}
+
+.icon-event-share::before {
+  content: "\61";
+}
+#copyButton {
+  font-size: 13px;
+  line-height: 1;
+}

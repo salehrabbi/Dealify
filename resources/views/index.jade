@@ -4,4 +4,55 @@ block title
   title Home
 
 block main
-  
+  #PreLoaderBar.loading-welcome.active.welcome-screen(style='background-color: #ffffff;')
+    .progress
+      .loading-bar.indeterminate(style='background-color: rgb(0, 0, 0);')
+    .helper
+    img(src='dist/images/welcome.png' style='max-width: 100px; max-height: 100px;')
+  .sh-bar
+    .sh-container(style='position: relative;')
+      i#share-fab-button.sh-bar__share.icon.icon-event-share
+      .sh-bar__name.ng-binding
+      .sh-bar__company.ng-binding.ng-hide
+  .sh-background(style='background-image: linear-gradient(rgb(0, 0, 0), rgb(243, 113, 37)); color: rgb(255, 255, 255);')
+  #rootElement.sh-container
+    div
+      .sh-page(style='height: auto;')
+        img.sh-avatar(src='dist/images/logo.png' alt='logo')
+        .sh-page__title.ng-binding Dealify App
+        div
+          a.sh-button.ng-binding(href='http://dealify.ca' target='_blank' style='border-color: rgba(255, 255, 255, 0.7);')
+            | Learn more
+        div
+          a.sh-store-link(href='https://apps.apple.com/us/app/dealify/id1174749137?uo=4' target='_blank')
+            img.sh-store-link__image(src='dist/images/apple-en.png' alt='')
+        div
+          a.sh-store-link(href='https://play.google.com/store/apps/details?id=freaktemplate.coupon&hl=en' target='_blank')
+            img.sh-store-link__image(src='dist/images/google-en.png' alt='')
+      #shareFab2.fabs
+        .fixed-blur-bgd
+          .overlya-share
+          .chat
+            .fab-body
+              .icon-fab-close.icon-event-close
+              .fab-header(style='color: rgb(243, 113, 37);') Share page
+              ul
+                li
+                  i.icon-fab-share-facebook.icon-event-facebook
+                  a(href='https://www.facebook.com/sharer/sharer.php?u=http://qrco.de/bbIefJ?trackSharing=1' target='_blank') Facebook
+                li
+                  i.icon-fab-share-twitter.icon-event-twitter
+                  a(href='https://twitter.com/share?url=http://qrco.de/bbIefJ?trackSharing=1' target='_blank') Twitter
+                li
+                  i.icon-fab-share-googleplus.icon-event-googleplus
+                  a(href='https://plus.google.com/share?url=http://qrco.de/bbIefJ?trackSharing=1' target='_blank') Google+
+                li
+                  i.icon-fab-share-email.icon-event-email
+                  a(href='mailto:?body=http://qrco.de/bbIefJ?trackSharing=1' target='_blank') Email
+                li
+                  i.icon-fab-share-message.icon-event-message
+                  span#texttocopy(style='display: none;') http://qrco.de/bbIefJ?trackSharing=1
+                  a#copyButton1.copyButton(href='javascript:void(0)' onclick="copyToClipboard('#texttocopy')")
+                    | Copy Link 
+                    span.d-none.CopySucceed
+                      | (Copied)
