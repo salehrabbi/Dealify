@@ -1,0 +1,15 @@
+//- TODO: add the function to my blank html
+mixin img(src, className, count)
+  a.d-block(href="#" class=count)
+    img(src="dist/images/" + src, alt="" class=className)
+
+mixin slide(src, name, subname)
+  .item
+    .text-left.pl-lg-5.pl-sm-5.pl-4
+      .notify.d-inline-block NEW
+    div.img.d-flex.align-items-end.justify-content-center
+      div
+        img(src="dist/images/" + src, alt="")
+    div  
+      a.title(href="#")= name
+    p= subname 
