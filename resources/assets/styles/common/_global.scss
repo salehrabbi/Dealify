@@ -61,3 +61,14 @@ body {
   font-size: 13px;
   line-height: 1;
 }
+
+@include rwd(659) {
+  #dvideo-body {
+    .vcard-template .vcard-body .follow-scroll {
+      position: fixed;
+      bottom: 5px;
+      right: 0px;
+      width: 80px;
+    }
+  }
+}
