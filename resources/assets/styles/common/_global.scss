@@ -20,19 +20,17 @@ body {
   }
 }
 
-#shareFab {
-  .fab-body ul li i.icon-fab-share-facebook {
-    color: #3a5897;
-  }
-  .fab-body ul li i.icon-fab-share-twitter {
-    color: #1da1f2;
-  }
-  .fab-body ul li i.icon-fab-share-googleplus {
-    color: #ea4335;
-  }
-  .fab-body ul li i.icon-fab-share-whatsapp {
-    color: #25d366;
-  }
+.fab-body ul li i.icon-fab-share-facebook {
+  color: #3a5897;
+}
+.fab-body ul li i.icon-fab-share-twitter {
+  color: #1da1f2;
+}
+.fab-body ul li i.icon-fab-share-googleplus {
+  color: #ea4335;
+}
+.fab-body ul li i.icon-fab-share-whatsapp {
+  color: #25d366 !important;
 }
 
 #shortUrl {

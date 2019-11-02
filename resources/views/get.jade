@@ -1,7 +1,7 @@
 extends layouts/app.jade
 
 block title
-  title Home
+  title Get
 
 block main
   #PreLoaderBar.loading-welcome.active.welcome-screen(style='background-color: #ffffff;')
@@ -21,7 +21,7 @@ block main
         img.sh-avatar(src='dist/images/logo.png' alt='logo')
         .sh-page__title.ng-binding Dealify App
         div
-          a.sh-button.ng-binding(href='http://dealify.ca' target='_blank' style='border-color: rgba(255, 255, 255, 0.7);')
+          a.sh-button.ng-binding(href='http://dealify.info' target='_blank' style='border-color: rgba(255, 255, 255, 0.7);')
             | Learn more
         div
           a.sh-store-link(href='https://apps.apple.com/us/app/dealify/id1174749137?uo=4' target='_blank')
@@ -39,20 +39,24 @@ block main
               ul
                 li
                   i.icon-fab-share-facebook.icon-event-facebook
-                  a(href='https://www.facebook.com/sharer/sharer.php?u=http://qrco.de/bbIefJ?trackSharing=1' target='_blank') Facebook
+                  a(href='https://www.facebook.com/sharer/sharer.php?u=https://dealify.info/get.html' target='_blank') Facebook
                 li
                   i.icon-fab-share-twitter.icon-event-twitter
-                  a(href='https://twitter.com/share?url=http://qrco.de/bbIefJ?trackSharing=1' target='_blank') Twitter
+                  a(href='https://twitter.com/share?url=https://dealify.info/get.html' target='_blank') Twitter
                 li
-                  i.icon-fab-share-googleplus.icon-event-googleplus
-                  a(href='https://plus.google.com/share?url=http://qrco.de/bbIefJ?trackSharing=1' target='_blank') Google+
+                  i.iconFab.icon-fab-share-whatsapp
+                  a.ssk.ssk-whatsapp(href='whatsapp://send?text=https://dealify.info/get.html') Whatsapp
                 li
-                  i.icon-fab-share-email.icon-event-email
-                  a(href='mailto:?body=http://qrco.de/bbIefJ?trackSharing=1' target='_blank') Email
+                  i.icon-fab-share-email
+                  <a href="mailto:?subject=A friend has shared the Dealify App&body=Hey,%0D%0A I just downloaded the Dealify App on my mobile device. It's a free mobile search app available for Android phones and iPhones that delivers great local deals and discounts on dining, shopping, entertainment and more with just a few taps.%0D%0A Looking to score some deals and discounts? Download it today from http://dealify.info" target="_blank">Email</a>
                 li
-                  i.icon-fab-share-message.icon-event-message
-                  span#texttocopy(style='display: none;') http://qrco.de/bbIefJ?trackSharing=1
-                  a#copyButton1.copyButton(href='javascript:void(0)' onclick="copyToClipboard('#texttocopy')")
-                    | Copy Link 
-                    span.d-none.CopySucceed
-                      | (Copied)
+                  i.icon-fab-share-message
+                  <a href="sms:?&body=Hey,%0D%0A I just downloaded the Dealify App on my mobile device. It's a free mobile search app available for Android phones and iPhones that delivers great local deals and discounts on dining, shopping, entertainment and more with just a few taps.%0D%0A Looking to score some deals and discounts? Download it today from http://dealify.info">SMS</a>                      
+
+                //- li
+                //-   i.icon-fab-share-message.icon-event-message
+                //-   span#texttocopy(style='display: none;') http://qrco.de/bbIefJ?trackSharing=1
+                //-   a#copyButton1.copyButton(href='javascript:void(0)' onclick="copyToClipboard('#texttocopy')")
+                //-     | Copy Link 
+                //-     span.d-none.CopySucceed
+                //-       | (Copied)
